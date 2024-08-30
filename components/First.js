@@ -139,11 +139,28 @@ function First({className}) {
     <CImage className="d-block w-100" src="./img/hero/hero5.png" alt="slide 5" />
     <CCarouselCaption className="d-block" >
       <h2 style={headingStyle}>RISE with SAP</h2>
-      <p className="d-none d-md-block" style={{maxWidth:"80%", animationDelay:"0.4s", margin:"0 auto 30px auto"}}>Transition to the cloud seamlessly with RISE with SAP, empowering your existing systems with future-ready cloud capabilities.</p>
+      <p className="d-none d-md-block" style={{maxWidth:"80%", animationDelay:"0.4s", margin:"0 auto 0 auto"}}>Transition to the cloud seamlessly with RISE with SAP, empowering your existing systems with future-ready cloud capabilities.</p>
       <a href="#about" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{textDecoration:"none"}}>Read More</a>
     </CCarouselCaption>
   </CCarouselItem>
 </CCarousel>
+<div className={styles.hero}>
+<svg className={styles["hero-waves"]} xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+  <defs>
+    <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+  </defs>
+  <g className={styles.wave1}>
+    <use href="#wave-path" x="50" y="3" />
+  </g>
+  <g className={styles.wave2}>
+    <use href="#wave-path" x="50" y="0" />
+  </g>
+  <g className={styles.wave3}>
+    <use href="#wave-path" x="50" y="9" />
+  </g>
+</svg>
+</div>
+
   {/* <section id="hero" className={`${styles.hero} ${styles.section} ${styles["dark-background"]}`}>
 
 <div  id="hero-carousel" data-bs-interval="5000" className={`container carousel carousel-fade`} data-bs-ride="carousel">

@@ -1339,18 +1339,18 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    background: linear-gradient(0deg, #2a2c39 0%, color-mix(in srgb, #2a2c39 90%, white 10%) 100%);
-    background-image: url('../public/img/hero/contactpic.png');
-    background-size: cover; /* Ensures the entire image is visible */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
+    /* background: linear-gradient(0deg, #2a2c39 0%, color-mix(in srgb, #2a2c39 90%, white 10%) 100%); */
+    /* background-image: url('../public/img/hero/contactpic.png'); */
+    /* background-size: cover; 
+    background-position: center;  */
+    background-repeat: no-repeat; 
     padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: end;
     align-items: center;
     color: white;
-    box-shadow: inset 0 0 0 300px rgba(0,0,0,0.5); 
+    /* box-shadow: inset 0 0 0 300px rgba(0,0,0,0.5);  */
     margin-top: 5%;
   }
   
@@ -1474,7 +1474,7 @@
   .hero .wave1 use {
     animation: move-forever1 10s linear infinite;
     animation-delay: -2s;
-    fill: white;
+    fill: skyblue;
     opacity: 0.6;
   }
   
@@ -1488,7 +1488,7 @@
   .hero .wave3 use {
     animation: move-forever3 6s linear infinite;
     animation-delay: -2s;
-    fill: white;
+    fill: #1b88cd;
   }
   .hero a{
     text-decoration: none;
