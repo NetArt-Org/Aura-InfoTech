@@ -164,7 +164,7 @@ function Third({className}) {
       <a href="service-details.html" className={`stretched-link`}>
         <h3>Customer-Centric Approach</h3>
       </a>
-      <p>We prioritize our clients' needs and goals, delivering personalized solutions and services that drive meaningful outcomes and long-term success.
+      <p>We prioritize our clients&#39; needs and goals, delivering personalized solutions and services that drive meaningful outcomes and long-term success.
       </p>
     </div>
   </div>
