@@ -94,7 +94,7 @@ function Third({className}) {
 
     <div className={`col-lg-6`} >
       <h3>Our Mission</h3>
-      <p>Our mission is to deliver innovative, high-quality, and reliable IT solutions that drive successful digital transformation for businesses. We are dedicated to providing exceptional service, fostering long-term partnerships, and making a positive impact on our clients' success.
+      <p>Our mission is to deliver innovative, high-quality, and reliable IT solutions that drive successful digital transformation for businesses. We are dedicated to providing exceptional service, fostering long-term partnerships, and making a positive impact on our clients&#39; success.
       </p>
       <p>By combining our expertise with deep industry insights, we aim to help organizations reinvent their business models, achieve operational excellence, and unlock new opportunities for growth.
       </p>
