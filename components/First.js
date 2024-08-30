@@ -112,7 +112,7 @@ function First({className}) {
     </CCarouselCaption>
   </CCarouselItem>
   <CCarouselItem style={{maxHeight:"600px"}}>
-    <CImage className={`d-block w-100`} src="./img/hero/hero2.jpg" alt="slide 2" />
+    <CImage className={`d-block w-100`} src="./img/hero/hero2.png" alt="slide 2" />
     <CCarouselCaption className="d-block" >
       <h2 style={headingStyle}>Simplify your IT Landscape with Award-Winning ERP Solutions</h2>
       <p  className="d-none d-md-block" style={{maxWidth:"80%", animationDelay:"0.4s", margin:"0 auto 30px auto"}}>Streamline operations and reduce complexity with our industry-leading ERP systems, designed for efficiency and scalability.</p>
