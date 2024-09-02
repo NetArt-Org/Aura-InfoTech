@@ -2,6 +2,10 @@ import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import First from "./components/First";
 import Second from "./components/Second";
 import Third from "./components/Third";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import ContactForm from "./components/ContactForm";
+import CTA from "./components/CTA";
 export const PLASMIC = initPlasmicLoader({
   projects: [
     {
@@ -24,6 +28,10 @@ export const PLASMIC = initPlasmicLoader({
 // http://localhost:3000/plasmic-host).  See
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
+PLASMIC.registerComponent(Header,{
+  name:"Header",
+  props: {}
+});
 PLASMIC.registerComponent(First,{
   name:"First",
   props: {}
@@ -34,5 +42,17 @@ PLASMIC.registerComponent(Second,{
 });
 PLASMIC.registerComponent(Third,{
   name:"Third",
+  props: {}
+});
+PLASMIC.registerComponent(ContactForm,{
+  name:"ContactForm",
+  props: {}
+});
+PLASMIC.registerComponent(CTA,{
+  name:"CTA",
+  props: {}
+});
+PLASMIC.registerComponent(Footer,{
+  name:"Footer",
   props: {}
 });

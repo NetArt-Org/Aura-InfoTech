@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .about ul {
     list-style: none;
     padding: 0;
