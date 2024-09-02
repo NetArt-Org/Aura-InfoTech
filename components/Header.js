@@ -68,34 +68,38 @@ const Header = ({ className }) => {
                         <h1 className={`sitename`}>Aura InfoTech</h1>
                     </Link>
                     <div>
+                        {/* Hamburger Icon */}
+                        <i
+                            className={`${styles['mobile-nav-toggle']} d-xl-none bi bi-list`}
+                            onClick={handleMenuToggle} /* Add this line */
+                        ></i>
 
-                    <i className={`${styles['mobile-nav-toggle']} d-xl-none bi bi-list`}></i>
-
-                    {/* Mobile Menu Drawer */}
-                    <div className={`${styles['mobile-nav']} ${isMobileMenuOpen ? styles.open : ''}`}>
-                        <nav id="navmenu" className={styles.navmenu}>
-                            <ul>
-                                <li><Link href="/" className={headClicked === 'home' ? styles.active : styles.hov} onClick={() => { setheadClicked('home'); handleMenuToggle(); }}>Home</Link></li>
-                                <li><Link href="/about-us/" className={headClicked === 'about' ? styles.active : styles.hov} onClick={() => { setheadClicked('about'); handleMenuToggle(); }}>About Us</Link></li>
-                                <li className={`${styles.dropdown} ${isServicesOpen ? styles.open : ''}`}>
-                                    <a onClick={handleServicesToggle} className={styles.dropdownToggle}>
-                                        <span>Services</span> <i className={`bi bi-chevron-down toggle-dropdown`}></i>
-                                    </a>
-                                    <ul className={`${styles.dropdownMenu} ${isServicesOpen ? styles.open : ''}`}>
-                                        {dropdownItems.map((item) => (
-                                            <li key={item.href}>
-                                                <Link href={item.href} onClick={handleMenuToggle}>{item.label}</Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </li>
-                                <li><Link href="/contact-us/" className={headClicked === 'contact' ? styles.active : styles.hov} onClick={() => { setheadClicked('contact'); handleMenuToggle(); }}>Contact Us</Link></li>
-                            </ul>
-                        </nav>
-                    </div>
+                        {/* Mobile Menu Drawer */}
+                        <div className={`${styles['mobile-nav']} ${isMobileMenuOpen ? styles.open : ''}`}>
+                            <nav id="navmenu" className={styles.navmenu}>
+                                <ul>
+                                    <li><Link href="/" className={headClicked === 'home' ? styles.active : styles.hov} onClick={() => { setheadClicked('home'); handleMenuToggle(); }}>Home</Link></li>
+                                    <li><Link href="/about-us/" className={headClicked === 'about' ? styles.active : styles.hov} onClick={() => { setheadClicked('about'); handleMenuToggle(); }}>About Us</Link></li>
+                                    <li className={`${styles.dropdown} ${isServicesOpen ? styles.open : ''}`}>
+                                        <a onClick={handleServicesToggle} className={styles.dropdownToggle}>
+                                            <span>Services</span> <i className={`bi bi-chevron-down toggle-dropdown`}></i>
+                                        </a>
+                                        <ul className={`${styles.dropdownMenu} ${isServicesOpen ? styles.open : ''}`}>
+                                            {dropdownItems.map((item) => (
+                                                <li key={item.href}>
+                                                    <Link href={item.href} onClick={handleMenuToggle}>{item.label}</Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </li>
+                                    <li><Link href="/contact-us/" className={headClicked === 'contact' ? styles.active : styles.hov} onClick={() => { setheadClicked('contact'); handleMenuToggle(); }}>Contact Us</Link></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </div>
                 </div>
             </header>
+
         </>
     );
 };
