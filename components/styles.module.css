@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 .about ul {
     list-style: none;
     padding: 0;
@@ -1599,3 +1596,4 @@
     color: color-mix(in srgb, #1b88cd, transparent 25%);
     text-decoration: none;
   }
+  
