@@ -132,7 +132,7 @@ function First({ className }) {
               <CCarouselCaption className="d-block" style={captionStyle}>
                 <h2 style={headingStyle}>GROW with SAP</h2>
                 <p className="d-none d-md-block" style={{ maxWidth: "80%", animationDelay: "0.4s", margin: "0 auto 30px auto" }}>Unlock growth potential with SAP solutions tailored for small and medium businesses, enabling faster innovation and expansion.</p>
-                <a href="#about" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</a>
+                <Link href="/grow-with-sap" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</Link>
               </CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem style={{ maxHeight: "600px" }}>
@@ -140,7 +140,7 @@ function First({ className }) {
               <CCarouselCaption className="d-block" >
                 <h2 style={headingStyle}>RISE with SAP</h2>
                 <p className="d-none d-md-block" style={{ maxWidth: "80%", animationDelay: "0.4s", margin: "0 auto 0 auto" }}>Transition to the cloud seamlessly with RISE with SAP, empowering your existing systems with future-ready cloud capabilities.</p>
-                <a href="#about" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</a>
+                <Link href="/rise-with-sap" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</Link>
               </CCarouselCaption>
             </CCarouselItem>
           </CCarousel>

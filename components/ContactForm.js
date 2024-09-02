@@ -1,10 +1,18 @@
+import React, { useState, useEffect } from 'react'
+import AOS from "aos";
 import "aos/dist/aos.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './styles.module.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@coreui/coreui/dist/css/coreui.min.css'
 function ContactForm({ className }) {
-
+    useEffect(() => {
+        AOS.init({
+            disable: "phone",
+            duration: 700,
+            easing: "ease-out-cubic",
+        });
+    }, []);
     return (
         <>
             <section id="contact" className={`${className} ${styles.contact} ${styles.section}`}>
