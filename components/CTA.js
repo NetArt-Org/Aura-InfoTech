@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react'
+import AOS from "aos";
 import "aos/dist/aos.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './styles.module.css'
@@ -5,7 +7,13 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import Link from 'next/link'
 import '@coreui/coreui/dist/css/coreui.min.css'
 function CTA({ className }) {
- 
+    useEffect(() => {
+        AOS.init({
+            disable: "phone",
+            duration: 700,
+            easing: "ease-out-cubic",
+        });
+    }, []);
 
     return (
         <>
