@@ -1,9 +1,12 @@
 import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 import First from "./components/First";
-import Second from "./components/Second";
-import Third from "./components/Third";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import InfoContent from "./components/InfoContent";
+import CardContent from "./components/CardContent";
+import Testimonial from "./components/Testimonial";
+import Team from "./components/Team";
+import Banner from "./components/Banner";
 import ContactForm from "./components/ContactForm";
 import CTA from "./components/CTA";
 export const PLASMIC = initPlasmicLoader({
@@ -30,18 +33,30 @@ export const PLASMIC = initPlasmicLoader({
 
 PLASMIC.registerComponent(Header,{
   name:"Header",
-  props: {}
+  props: { }
+});
+PLASMIC.registerComponent(Testimonial,{
+  name:"Testimonial",
+  props: { children:"slot"}
+});
+PLASMIC.registerComponent(InfoContent,{
+  name:"InfoContent",
+  props: {heading:'string', subHeading:'string', paraHeading1:'string', paraContent1:'string',paraContent2:'string',paraHeading2:'string', paraContent3:'string' ,paraContent4:'string'   }
+});
+PLASMIC.registerComponent(CardContent,{
+  name:"CardContent",
+  props: {heading:'string', subHeading:'string', cardContent:'object', }
+});
+PLASMIC.registerComponent(Team,{
+  name:"Team",
+  props: { }
+});
+PLASMIC.registerComponent(Banner,{
+  name:"Banner",
+  props: {heading:'string',subHeading:'string',btnText:'string',btnLink:'string'}
 });
 PLASMIC.registerComponent(First,{
   name:"First",
-  props: {}
-});
-PLASMIC.registerComponent(Second,{
-  name:"Second",
-  props: {}
-});
-PLASMIC.registerComponent(Third,{
-  name:"Third",
   props: {}
 });
 PLASMIC.registerComponent(ContactForm,{
