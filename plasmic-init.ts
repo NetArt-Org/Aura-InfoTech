@@ -33,11 +33,11 @@ export const PLASMIC = initPlasmicLoader({
 
 PLASMIC.registerComponent(Header,{
   name:"Header",
-  props: { }
+  props: {}
 });
 PLASMIC.registerComponent(Testimonial,{
   name:"Testimonial",
-  props: { children:"slot"}
+  props: { }
 });
 PLASMIC.registerComponent(InfoContent,{
   name:"InfoContent",

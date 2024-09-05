@@ -66,49 +66,13 @@ function First({ className }) {
       <div className={styles["index-page"]}>
 
         <main className={styles.main}>
-          <header id="header" className={`${styles.header} d-flex align-items-center fixed-top`}>
-            <div className={`container-fluid container-xl position-relative d-flex align-items-center justify-content-between`}>
-
-              <Link href="/" className={`${styles.logo} d-flex align-items-center`}>
-                {/* Uncomment the line below if you also wish to use an image logo  */}
-                <img src="./img/auraLogo.png" alt="" />
-                <h1 className={`sitename`}>Aura InfoTech</h1>
-              </Link>
-
-              <nav id="navmenu" className={styles.navmenu}>
-                <ul>
-                  <li><a href="#hero" className={headClicked === 'home' ? styles.active : ''} onClick={() => { setheadClicked('home') }}  >Home</a></li>
-                  <li><Link href="/about-us" className={headClicked === 'about' ? styles.active : ''} onClick={() => { setheadClicked('about') }} >About Us</Link></li>
-                  {/* <li><a href="#services" className={headClicked==='services'?styles.active:''} onClick={()=>{setheadClicked('services')}}>Services</a></li> */}
-                  {/* <li><a href="#portfolio" className={headClicked==='portfolio'?styles.active:''} onClick={()=>{setheadClicked('portfolio')}}>Portfolio</a></li> */}
-                  {/* <li><a href="#team" className={headClicked==='team'?styles.active:''} onClick={()=>{setheadClicked('team')}}>Team</a></li> */}
-                  {/* <li><a href="blog.html" className={headClicked==='blog'?styles.active:''} onClick={()=>{setheadClicked('blog')}}>Blog</a></li> */}
-                  <li className={`${styles.dropdown} ${headClicked === 'services' ? styles.active : ''}`} onClick={() => { setheadClicked('services') }} ><a href="#" ><span >Services</span> <i className={`bi bi-chevron-down toggle-dropdown`} ></i></a>
-                    <ul>
-                      <li><a href="#">SAP Solutions</a></li>
-                      <li><a href="#">SAP Services</a></li>
-                      <li><a href="#">Cloud</a></li>
-                      <li><a href="#">Enterprise Analytics with Tableau</a></li>
-                      <li><a href="#">Power BI</a></li>
-                      <li><a href="#">Technology Services</a></li>
-                      <li><a href="#">Business Processing</a></li>
-                      <li><a href="#">Consulting</a></li>
-                    </ul>
-                  </li>
-                  <li><Link href="/contact-us" className={headClicked === 'contact' ? styles.active : ''} onClick={() => { setheadClicked('contact') }} >Contact Us</Link></li>
-                </ul>
-                <i className={` ${styles["mobile-nav-toggle"]} ${mobileNav ? "mobile-nav-active" : "mobile-nav-toggle"} d-xl-none bi bi-list`} onClick={() => { setmobileNav(!mobileNav) }}></i>
-              </nav>
-
-            </div>
-          </header>
           <CCarousel controls indicators>
             <CCarouselItem style={{ maxHeight: "600px" }}>
               <CImage className={`d-block w-100`} src="./img/hero/hero1.jpg" alt="slide 1" />
               <CCarouselCaption className="d-block" >
                 <h2 style={headingStyle}>Accelerate your Digital Transformation with SAP</h2>
                 <p className="d-none d-md-block" style={{ maxWidth: "80%", animationDelay: "0.4s", margin: "0 auto 30px auto" }}>Empower your business with cutting-edge SAP solutions, driving agility, innovation, and growth in a rapidly changing landscape.</p>
-                <a href="#about" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</a>
+                <Link href="/accelerate-your-digital-transformation" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</Link>
               </CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem style={{ maxHeight: "600px" }}>
@@ -116,7 +80,7 @@ function First({ className }) {
               <CCarouselCaption className="d-block" >
                 <h2 style={headingStyle}>Simplify your IT Landscape with Award-Winning ERP Solutions</h2>
                 <p className="d-none d-md-block" style={{ maxWidth: "80%", animationDelay: "0.4s", margin: "0 auto 30px auto" }}>Streamline operations and reduce complexity with our industry-leading ERP systems, designed for efficiency and scalability.</p>
-                <a href="#about" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</a>
+                <Link href="/accelerate-your-digital-transformation" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</Link>
               </CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem style={{ maxHeight: "600px" }}>
@@ -124,7 +88,7 @@ function First({ className }) {
               <CCarouselCaption className="d-block" >
                 <h2 style={headingStyle}>Stay Ahead with SAP APO</h2>
                 <p className="d-none d-md-block" style={{ maxWidth: "80%", animationDelay: "0.4s", margin: "0 auto 30px auto" }}>Optimize your supply chain with SAP APO, ensuring precise planning and maintaining a competitive edge in the market.</p>
-                <a href="#about" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</a>
+                <Link href="/stay-ahead-with-sap-apo" className={`${styles["btn-get-started"]} animate__animated animate__fadeInUp scrollto`} style={{ textDecoration: "none" }}>Read More</Link>
               </CCarouselCaption>
             </CCarouselItem>
             <CCarouselItem style={{ maxHeight: "600px" }}>
@@ -229,38 +193,76 @@ function First({ className }) {
               <div className={`row gy-4`}>
 
                 <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="100">
+                <Link href="/sap-solutions">
                   <div className={`${styles["service-item"]}  position-relative`}>
                     <div className={styles.icon}>
-                      <i className={`bi bi-cash-stack`} style={{ color: "#0dcaf0" }}></i>
+                      {/* <i className={`bi bi-cash-stack`} style={{ color: "#0dcaf0" }}></i> */}
+                      <img src="/img/sap-cloud.png"/>
                     </div>
-                    <a href="service-details.html" className={`stretched-link`}>
+                    {/* <Link href="/sap-solutions" className={`stretched-link`}> */}
                       <h3>SAP Solutions</h3>
-                    </a>
                     <p>Transform your operations with SAP S/4 HANA Cloud, offering real-time insights and seamless integration to drive growth and efficiency.
                     </p>
                   </div>
+                    </Link>
                 </div>
 
                 <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="200">
+                <Link href="/sap-services">
                   <div className={`${styles["service-item"]} position-relative`}>
                     <div className={styles.icon}>
-                      <i className={`bi bi-calendar4-week`} style={{ color: "#fd7e14" }}></i>
+                    <img src="/img/sap-cloud.png"/>
+                      {/* <i className={`bi bi-calendar4-week`} style={{ color: "#fd7e14" }}></i> */}
                     </div>
-                    <a href="service-details.html" className={`stretched-link`}>
                       <h3>SAP Services</h3>
-                    </a>
                     <p>Expert implementation and support tailored to your needs. Enhance your SAP systems with our comprehensive services.</p>
                   </div>
+                  </Link>
                 </div>
-
+                <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="500">
+                <Link href="/sap-business-one">
+                  <div className={`${styles["service-item"]} position-relative`}>
+                    <div className={styles.icon}>
+                    <img src="/img/sap-business-one.png"/>
+                      {/* <i className={`bi bi-globe`} style={{ color: "#6610f2" }}></i> */}
+                    </div>
+                      <h3>SAP Business One
+                      </h3>
+                    <p>Turn data into actionable insights with Power BI’s interactive dashboards and reports, enhancing your decision-making process.</p>
+                  </div>
+                  </Link>
+                </div>
+                <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="600">
+                <Link href="/business-consulting-services">
+                  <div className={`${styles["service-item"]} position-relative`}>
+                    <div className={styles.icon}>
+                      <i className={`bi bi-people-fill`} style={{ color: "#f3268c" }}></i>
+                    </div>
+                      <h3>Business Consulting
+                      </h3>
+                    <p>Receive strategic guidance to navigate challenges and drive business growth with our consulting services.
+                    </p>
+                  </div>
+                  </Link>
+                </div>
+                <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="500">
+                <Link href="/power-bi">
+                  <div className={`${styles["service-item"]} position-relative`}>
+                    <div className={styles.icon}>
+                      <i className={`bi bi-file-earmark-bar-graph`} style={{ color: "#6610f2" }}></i>
+                    </div>
+                      <h3>Power BI
+                      </h3>
+                    <p>Turn data into actionable insights with Power BI’s interactive dashboards and reports, enhancing your decision-making process.</p>
+                  </div>
+                  </Link>
+                </div>
                 <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="300">
                   <div className={`${styles["service-item"]} position-relative`}>
                     <div className={styles.icon}>
-                      <i className={`bi bi-chat-text`} style={{ color: "#20c997" }}></i>
+                      <i className={`bi bi-cloud`} style={{ color: "#20c997" }}></i>
                     </div>
-                    <a href="service-details.html" className={`stretched-link`}>
                       <h3>Cloud</h3>
-                    </a>
                     <p>Modernize your infrastructure with our scalable cloud solutions, designed to meet your evolving business requirements.</p>
                   </div>
                 </div>
@@ -268,61 +270,21 @@ function First({ className }) {
                 <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="400">
                   <div className={`${styles["service-item"]} position-relative`}>
                     <div className={styles.icon}>
-                      <i className={`bi bi-credit-card-2-front`} style={{ color: "#df1529" }}></i>
+                      <i className={`bi bi-bar-chart-fill`} style={{ color: "#df1529" }}></i>
                     </div>
-                    <a href="service-details.html" className={`stretched-link`}>
                       <h3>Enterprise Analytics with Tableau</h3>
-                    </a>
                     <p>Leverage Tableau for powerful data visualization that drives smarter business decisions and strategic insights.</p>
                   </div>
                 </div>
 
-                <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="500">
-                  <div className={`${styles["service-item"]} position-relative`}>
-                    <div className={styles.icon}>
-                      <i className={`bi bi-globe`} style={{ color: "#6610f2" }}></i>
-                    </div>
-                    <a href="service-details.html" className={`stretched-link`}>
-                      <h3>Power BI
-                      </h3>
-                    </a>
-                    <p>Turn data into actionable insights with Power BI’s interactive dashboards and reports, enhancing your decision-making process.</p>
-                  </div>
-                </div>
-
                 <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="600">
+                  
                   <div className={`${styles["service-item"]} position-relative`}>
                     <div className={styles.icon}>
-                      <i className={`bi bi-clock`} style={{ color: "#f3268c" }}></i>
+                      <i className={`bi bi-phone`} style={{ color: "#f3268c" }}></i>
                     </div>
-                    <a href="service-details.html" className={`stretched-link`}>
-                      <h3>Technology Services</h3>
-                    </a>
-                    <p>Optimize your IT systems with our technology solutions, designed to improve efficiency and operational effectiveness.</p>
-                  </div>
-                </div>
-                <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="600">
-                  <div className={`${styles["service-item"]} position-relative`}>
-                    <div className={styles.icon}>
-                      <i className={`bi bi-clock`} style={{ color: "#f3268c" }}></i>
-                    </div>
-                    <a href="service-details.html" className={`stretched-link`}>
-                      <h3>Consulting
-                      </h3>
-                    </a>
-                    <p>Receive strategic guidance to navigate challenges and drive business growth with our consulting services.
-                    </p>
-                  </div>
-                </div>
-                <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="600">
-                  <div className={`${styles["service-item"]} position-relative`}>
-                    <div className={styles.icon}>
-                      <i className={`bi bi-clock`} style={{ color: "#f3268c" }}></i>
-                    </div>
-                    <a href="service-details.html" className={`stretched-link`}>
-                      <h3>Business Processing</h3>
-                    </a>
-                    <p>Enhance your business operations with expert consulting to streamline processes and boost productivity.</p>
+                      <h3>Application Development</h3>
+                    <p>Optimize your IT systems with our application development, designed to improve efficiency and operational effectiveness.</p>
                   </div>
                 </div>
 
