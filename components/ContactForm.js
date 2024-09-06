@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useForm, ValidationError } from '@formspree/react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,6 +7,7 @@ import styles from './styles.module.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '@coreui/coreui/dist/css/coreui.min.css'
 function ContactForm({ className }) {
+    const [state, handleSubmit] = useForm("myzgvndp");
     useEffect(() => {
         AOS.init({
             disable: "phone",
@@ -13,22 +15,8 @@ function ContactForm({ className }) {
             easing: "ease-out-cubic",
         });
     }, []);
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-      
-    //     const myForm = event.target;
-    //     const formData = new FormData(myForm);
-        
-    //     fetch("/", {
-    //       method: "POST",
-    //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //       body: new URLSearchParams(formData).toString(),
-    //     })
-    //       .then(() => console.log("Form successfully submitted"))
-    //       .catch((error) => alert(error));
-    //   };
-      
-      
+
+
     return (
         <>
             <section id="contact" className={`${className} ${styles.contact} ${styles.section}`}>
@@ -66,35 +54,36 @@ function ContactForm({ className }) {
                             </div>
                         </div>
                         <div className={`col-lg-8`}>
-                            <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" className={styles["php-email-form"]} data-aos="fade-up" data-aos-delay="200">
-                            <input type="hidden" name="form-name" value="contact" />
-                                <div className={`row gy-4`}>
-                                    <div className={`col-md-6`}>
-                                        <input type="text" name="name" className={`form-control`} placeholder="Your Name" required="" />
+                           
+                                <form onSubmit={handleSubmit} name="contact" className={styles["php-email-form"]} data-aos="fade-up" data-aos-delay="200">
+                                    <div className={`row gy-4`}>
+                                        <div className={`col-md-6`}>
+                                            <input type="text" name="name" className={`form-control`} placeholder="Your Name" required="" />
+                                        </div>
+
+                                        <div className={`col-md-6 `}>
+                                            <input type="email" className={`form-control`} name="email" placeholder="Your Email" required="" />
+                                        </div>
+
+                                        <div className={`col-md-12`}>
+                                            <input type="text" className={`form-control`} name="subject" placeholder="Subject" required="" />
+                                        </div>
+
+                                        <div className={`col-md-12`}>
+                                            <textarea className={`form-control`} name="message" rows="6" placeholder="Message" required=""></textarea>
+                                        </div>
+
+                                        <div className={`col-md-12 text-center`}>
+                                            <div className={styles.loading}>Loading</div>
+                                            <div className={styles["error-message"]}></div>
+                                            <div className={styles["sent-message"]}>Your message has been sent. Thank you!</div>
+
+                                            <button type="submit">Send Message</button>
+                                        </div>
+
                                     </div>
-
-                                    <div className={`col-md-6 `}>
-                                        <input type="email" className={`form-control`} name="email" placeholder="Your Email" required="" />
-                                    </div>
-
-                                    <div className={`col-md-12`}>
-                                        <input type="text" className={`form-control`} name="subject" placeholder="Subject" required="" />
-                                    </div>
-
-                                    <div className={`col-md-12`}>
-                                        <textarea className={`form-control`} name="message" rows="6" placeholder="Message" required=""></textarea>
-                                    </div>
-
-                                    <div className={`col-md-12 text-center`}>
-                                        <div className={styles.loading}>Loading</div>
-                                        <div className={styles["error-message"]}></div>
-                                        <div className={styles["sent-message"]}>Your message has been sent. Thank you!</div>
-
-                                        <button type="submit">Send Message</button>
-                                    </div>
-
-                                </div>
-                            </form>
+                                </form>
+                                {state.succeeded ? <p style={{ textAlign: 'center', marginTop: '20px' }}>Thanks! We'll get back to you shortly</p> :null}
                         </div>
 
                     </div>
