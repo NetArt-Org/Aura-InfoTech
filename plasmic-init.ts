@@ -37,7 +37,7 @@ PLASMIC.registerComponent(Header,{
 });
 PLASMIC.registerComponent(Testimonial,{
   name:"Testimonial",
-  props: { }
+  props: { children:"slot"}
 });
 PLASMIC.registerComponent(InfoContent,{
   name:"InfoContent",

@@ -13,6 +13,22 @@ function ContactForm({ className }) {
             easing: "ease-out-cubic",
         });
     }, []);
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+      
+    //     const myForm = event.target;
+    //     const formData = new FormData(myForm);
+        
+    //     fetch("/", {
+    //       method: "POST",
+    //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //       body: new URLSearchParams(formData).toString(),
+    //     })
+    //       .then(() => console.log("Form successfully submitted"))
+    //       .catch((error) => alert(error));
+    //   };
+      
+      
     return (
         <>
             <section id="contact" className={`${className} ${styles.contact} ${styles.section}`}>
@@ -50,7 +66,8 @@ function ContactForm({ className }) {
                             </div>
                         </div>
                         <div className={`col-lg-8`}>
-                            <form action="forms/contact.php" method="post" className={styles["php-email-form"]} data-aos="fade-up" data-aos-delay="200">
+                            <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" className={styles["php-email-form"]} data-aos="fade-up" data-aos-delay="200">
+                            <input type="hidden" name="form-name" value="contact" />
                                 <div className={`row gy-4`}>
                                     <div className={`col-md-6`}>
                                         <input type="text" name="name" className={`form-control`} placeholder="Your Name" required="" />
