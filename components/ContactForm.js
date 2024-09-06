@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { useForm, ValidationError } from '@formspree/react';
+import React, { useEffect } from 'react'
+import { useForm } from '@formspree/react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -15,8 +15,6 @@ function ContactForm({ className }) {
             easing: "ease-out-cubic",
         });
     }, []);
-
-
     return (
         <>
             <section id="contact" className={`${className} ${styles.contact} ${styles.section}`}>
@@ -54,7 +52,7 @@ function ContactForm({ className }) {
                             </div>
                         </div>
                         <div className={`col-lg-8`}>
-                           
+                        {state.succeeded ? <p style={{ textAlign: 'center', marginTop: '20px' }}>Thanks! We'll get back to you shortly</p> :
                                 <form onSubmit={handleSubmit} name="contact" className={styles["php-email-form"]} data-aos="fade-up" data-aos-delay="200">
                                     <div className={`row gy-4`}>
                                         <div className={`col-md-6`}>
@@ -82,8 +80,8 @@ function ContactForm({ className }) {
                                         </div>
 
                                     </div>
-                                </form>
-                                {state.succeeded ? <p style={{ textAlign: 'center', marginTop: '20px' }}>Thanks! We'll get back to you shortly</p> :null}
+                                </form>}
+                               
                         </div>
 
                     </div>
