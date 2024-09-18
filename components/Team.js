@@ -22,15 +22,15 @@ function Team({ className, heading, subHeading, btnText, btnLink }) {
                 </div>
                 <div className={`container`}>
                     <div className={`row gy-4`}>
-                        <div className={`col-lg-4 col-md-6 d-flex align-items-stretch`} data-aos="fade-up" data-aos-delay="100">
+                        <div className={`col-lg-4 col-md-6 d-flex align-items-stretch ${styles["justify-center"]}`} data-aos="fade-up" data-aos-delay="100">
                             <div className={styles["team-member"]}>
                                 <div className={styles["member-img"]}>
-                                    <img src="./img/team/team-1.jpg" className={`img-fluid`} alt="" />
+                                    <img src="./img/team/ceo.jpeg" className={styles["team-img-fluid"]} alt="" />
                                     <div className={styles.social}>
                                         {/* <a href=""><i className={`bi bi-twitter-x`}></i></a>
       <a href=""><i className={`bi bi-facebook`}></i></a>
       <a href=""><i className={`bi bi-instagram`}></i></a> */}
-                                        <a href="" target='_blank'><i className={`bi bi-linkedin`}></i></a>
+                                        <a href="https://www.linkedin.com/in/lakscidarajan" target='_blank'><i className={`bi bi-linkedin`}></i></a>
                                     </div>
                                 </div>
                                 <div className={styles["member-info"]}>
@@ -39,10 +39,10 @@ function Team({ className, heading, subHeading, btnText, btnLink }) {
                                 </div>
                             </div>
                         </div>
-                        <div className={`col-lg-4 col-md-6 d-flex align-items-stretch`} data-aos="fade-up" data-aos-delay="200">
+                        <div className={`col-lg-4 col-md-6 d-flex align-items-stretch ${styles["justify-center"]}`} data-aos="fade-up" data-aos-delay="200">
                             <div className={styles["team-member"]}>
                                 <div className={styles["member-img"]}>
-                                    <img src="./img/team/team-2.jpg" className={`img-fluid`} alt="" />
+                                    <img src="./img/team/team-1.jpg" className={styles["team-img-fluid"]} alt="" />
                                     <div className={styles.social}>
                                         {/* <a href=""><i className={`bi bi-twitter-x`}></i></a>
       <a href=""><i className={`bi bi-facebook`}></i></a>
@@ -56,10 +56,10 @@ function Team({ className, heading, subHeading, btnText, btnLink }) {
                                 </div>
                             </div>
                         </div>
-                        <div className={`col-lg-4 col-md-6 d-flex align-items-stretch`} data-aos="fade-up" data-aos-delay="300">
+                        <div className={`col-lg-4 col-md-6 d-flex align-items-stretch ${styles["justify-center"]}`} data-aos="fade-up" data-aos-delay="300">
                             <div className={styles["team-member"]}>
                                 <div className={styles["member-img"]}>
-                                    <img src="./img/team/team-3.jpg" className={`img-fluid`} alt="" />
+                                    <img src="./img/team/cto.jpeg" className={styles["team-img-fluid"]} alt="" />
                                     <div className={styles.social}>
                                         {/* <a href=""><i className={`bi bi-twitter-x`}></i></a>
       <a href=""><i className={`bi bi-facebook`}></i></a>

@@ -39,7 +39,7 @@ function ContactForm({ className }) {
                                 <i className={`bi bi-telephone flex-shrink-0`}></i>
                                 <div>
                                     <h3>Call Us</h3>
-                                    <p>+91 9952244816</p>
+                                    <a href="tel:+6597544006">+6597544006</a>
                                 </div>
                             </div>
 
