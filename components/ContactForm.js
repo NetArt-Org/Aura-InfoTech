@@ -52,7 +52,7 @@ function ContactForm({ className }) {
                             </div>
                         </div>
                         <div className={`col-lg-8`}>
-                        {state.succeeded ? <p style={{ textAlign: 'center', marginTop: '20px' }}>Thanks! We'll get back to you shortly</p> :
+                        {state.succeeded ? <p style={{ textAlign: 'center', marginTop: '20px' }}>Thanks! We will get back to you shortly</p> :
                                 <form onSubmit={handleSubmit} name="contact" className={styles["php-email-form"]} data-aos="fade-up" data-aos-delay="200">
                                     <div className={`row gy-4`}>
                                         <div className={`col-md-6`}>
