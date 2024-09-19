@@ -1,5 +1,5 @@
 /**@format */
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -169,7 +169,7 @@ function First({ className }) {
               <div className={`row`} data-aos="zoom-in" data-aos-delay="100">
                 <div className={`col-xl-9 text-center text-xl-start`}>
                   <h3>Call To Action</h3>
-                  <p>Ready to transform your business? Get in touch with us today to explore how our expertise can drive growth and innovation for your organization. Let’s shape the future of your business together!
+                  <p>Ready to transform your business? Get in touch with us today to explore how our expertise can drive growth and innovation for your organization. Lets shape the future of your business together!
                   </p>
                 </div>
                 <div className={`col-xl-3 ${styles["cta-btn-container"]} text-center`}>
@@ -228,7 +228,7 @@ function First({ className }) {
                     </div>
                       <h3>SAP Business One
                       </h3>
-                    <p>Turn data into actionable insights with Power BI’s interactive dashboards and reports, enhancing your decision-making process.</p>
+                    <p>Expert implementation and support tailored to your business needs. Enhance your operations with SAP Business One, ensuring efficient management of your financials, sales, and more.</p>
                   </div>
                   </Link>
                 </div>
@@ -268,26 +268,28 @@ function First({ className }) {
                 </div>
 
                 <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="400">
+                <Link href="/web-development">
                   <div className={`${styles["service-item"]} position-relative`}>
                     <div className={styles.icon}>
                       <i className={`bi bi-bar-chart-fill`} style={{ color: "#df1529" }}></i>
                     </div>
-                      <h3>Enterprise Analytics with Tableau</h3>
-                    <p>Leverage Tableau for powerful data visualization that drives smarter business decisions and strategic insights.</p>
+                      <h3>Web Development</h3>
+                    <p>Custom web solutions designed to elevate your online presence. From responsive design to robust functionality, our web development services enhance your digital footprint.</p>
                   </div>
+                  </Link>
                 </div>
 
                 <div className={`col-lg-3 col-md-6`} data-aos="fade-up" data-aos-delay="600">
-                  
+                <Link href="/mobile-development">
                   <div className={`${styles["service-item"]} position-relative`}>
                     <div className={styles.icon}>
                       <i className={`bi bi-phone`} style={{ color: "#f3268c" }}></i>
                     </div>
-                      <h3>Application Development</h3>
-                    <p>Optimize your IT systems with our application development, designed to improve efficiency and operational effectiveness.</p>
+                      <h3>Mobile Development</h3>
+                    <p>Innovative mobile app development to connect with your audience on the go. Our services deliver seamless, high-performance apps that drive engagement and meet your business objectives.</p>
                   </div>
+                </Link>
                 </div>
-
               </div>
 
             </div>

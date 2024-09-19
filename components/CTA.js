@@ -22,7 +22,7 @@ function CTA({ className }) {
                     <div className={`row`} data-aos="zoom-in" data-aos-delay="100">
                         <div className={`col-xl-9 text-center text-xl-start`}>
                             <h3>Call To Action</h3>
-                            <p>Ready to transform your business? Get in touch with us today to explore how our expertise can drive growth and innovation for your organization. Let’s shape the future of your business together!
+                            <p>Ready to transform your business? Get in touch with us today to explore how our expertise can drive growth and innovation for your organization. Lets shape the future of your business together!
                             </p>
                         </div>
                         <div className={`col-xl-3 ${styles["cta-btn-container"]} text-center`}>
